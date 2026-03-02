@@ -2,10 +2,10 @@
 
 pkg_list=$(pip freeze | grep -v '^\-e')
 
-if [ ! -d "/workspace/venv" ]
+if [ ! -d "/venv" ]
 then
-    python3 -m venv /workspace/venv
-    source /workspace/venv/bin/activate
+    python3 -m venv /venv
+    source /venv/bin/activate
     if [ -n "$pkg_list" ]
     then
         echo $pkg_list | xargs -n1 pip install
