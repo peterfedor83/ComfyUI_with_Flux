@@ -1,0 +1,27 @@
+#build the docker ( using docker.io)
+sudo docker login -u peterfedor83 --password ****************************
+sudo docker build -t peterfedor83/comfy-without-flux .
+sudo docker push peterfedor83/comfy-without-flux:latest
+
+#build the docker ( using docker.io)
+sudo docker login -u peterfedor83 --password ****************************
+sudo docker build -t peterfedor83/comfy-without-flux .
+sudo docker push peterfedor83/comfy-without-flux:latest
+
+
+
+
+#Flux 2 Klein 9B
+#on /workspace download flux-2-klein-9b.safetensors :
+cd /workspace/Flux2.Klein.9B
+gdown https://drive.google.com/uc?id=18-aimWLBOnMkmeAb_t2aJn8ocNr5A50S
+
+wget https://huggingface.co/Comfy-Org/vae-text-encorder-for-flux-klein-9b/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors?download=true -O qwen_3_8b_fp8mixed.safetensors
+wget https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors?download=true -O flux2-vae.safetensors
+
+
+#copy from workspace ( script copyFlux2Klein9BToComfy.sh
+cp flux2-vae.safetensors  /ComfyUI/models/vae/flux2-vae.safetensors
+cp flux-2-klein-9b.safetensors /ComfyUI/models/diffusion_models/flux-2-klein-9b.safetensors
+cp qwen_3_8b_fp8mixed.safetensors /ComfyUI/models/text_encoders/qwen_3_8b_fp8mixed.safetensors
+

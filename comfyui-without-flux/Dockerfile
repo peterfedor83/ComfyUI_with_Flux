@@ -180,7 +180,4 @@ RUN mkdir -p /ComfyUI/models/insightface && \
 # fix missing directory for old network volumes
 RUN mkdir -p /opt/venv/lib/python3.10/site-packages/comfyui_workflow_templates/templates
 
-#sudo docker login -u peterfedor83 --password ****************************
-#sudo docker build -t peterfedor83/comfy-without-flux .
-#sudo docker push peterfedor83/comfy-without-flux:latest
 CMD [ "/start.sh" ]
