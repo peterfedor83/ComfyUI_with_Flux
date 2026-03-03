@@ -9,3 +9,10 @@ wget -O /ComfyUI/models/loras/my_loralein9bPussy.safetensors "https://civitai.co
 #A woman spreading legs
 wget -O /ComfyUI/models/loras/my_loraKlein9bSpreading.safetensors "https://civitai.com/api/download/models/2612784?type=Model&format=SafeTensor&token=${CIVIT_AI_TOKEN}"
 
+#showing in clothes
+wget -O /ComfyUI/models/loras/my_loraKlein9bClothes.safetensors "https://civitai.com/api/download/models/2715365?type=Model&format=SafeTensor&token=${CIVIT_AI_TOKEN}"
+
+#showing in clothes
+wget -O /ComfyUI/models/loras/my_loraKlein9bAll.safetensors "https://civitai.com/api/download/models/2474488?type=Model&format=SafeTensor&token=${CIVIT_AI_TOKEN}"
+
+
